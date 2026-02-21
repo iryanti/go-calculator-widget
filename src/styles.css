@@ -1,0 +1,145 @@
+.go-root {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  max-width: 420px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* ---------- Title ---------- */
+.go-title {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* ---------- Field spacing ---------- */
+.go-field {
+  margin-bottom: 18px;
+}
+
+.go-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+/* ---------- Inputs ---------- */
+.go-input,
+.go-select {
+  width: 100%;
+  height: 42px;
+  padding: 10px 12px;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  outline: none;
+  background: #fff;
+  box-sizing: border-box;
+  transition: border 0.2s ease;
+}
+
+.go-input:focus,
+.go-select:focus {
+  border-color: #a8a8a8;
+}
+
+/* ---------- Row (rate + button) ---------- */
+.go-row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.go-row > div {
+  flex: 1;
+}
+
+.go-btn {
+  height: 42px;
+  padding: 0 14px;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  background: #f3f4f6;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.go-btn:hover {
+  background: #e9eaed;
+}
+
+.go-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ---------- Hint ---------- */
+.go-hint {
+  display: block;
+  font-size: 11px;
+  opacity: 0.65;
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
+.go-error {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #b91c1c;
+}
+
+/* ---------- Toggle ---------- */
+.go-toggle {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin: 14px 0 18px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ---------- Result Card ---------- */
+.go-card {
+  padding: 16px;
+  border: 1px solid #e5e5e5;
+  border-radius: 14px;
+  background: #ffffff;
+  margin-top: 10px;
+}
+
+.go-card div {
+  margin-bottom: 6px;
+}
+
+.go-divider {
+  height: 1px;
+  background: #ececec;
+  margin: 10px 0;
+}
+
+.go-final {
+  font-weight: 800;
+  font-size: 17px;
+  margin-top: 6px;
+}
+
+/* ---------- Disclaimer ---------- */
+.go-note {
+  margin-top: 16px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-size: 11px;
+  line-height: 1.5;
+  background: #fffbea;
+  border: 1px solid #facc15;
+  color: #713f12;
+}
+
+.go-note-title {
+  font-weight: 700;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}

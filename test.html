@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Widget UMD Test</title>
+  </head>
+  <body>
+    <h1>External Website Simulation</h1>
+
+    <div id="my-widget"></div>
+
+    <script src="./dist/go-widget.umd.js"></script>
+<script>
+      console.log("Version:", window.YPWidgets.GoCalculator.version);
+  window.YPWidgets.GoCalculator.mount("#my-widget");
+</script>
+  </body>
+</html>
