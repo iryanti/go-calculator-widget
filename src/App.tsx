@@ -1,10 +1,8 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
-import "./styles.css";
 import { WidgetRoot } from "./widget/WidgetRoot";
+import "./styles.css";
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <WidgetRoot />
-  </React.StrictMode>
-);
+const el = document.getElementById("go-calculator");
+if (!el) throw new Error("Missing container: #go-calculator");
+
+ReactDOM.createRoot(el).render(<WidgetRoot />);
