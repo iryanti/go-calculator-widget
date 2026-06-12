@@ -1,6 +1,6 @@
 // src/core/types.ts
 
-export type Country = "KR" | "CN" | "JP";
+export type Country = "KR" | "CN" | "JP" | "TH" | "PH";
 export type RoundingMode = "none" | "ceil_1000" | "round_1000";
 
 export type CalcInput = {

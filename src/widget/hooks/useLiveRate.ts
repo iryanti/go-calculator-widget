@@ -1,6 +1,13 @@
 import { useState } from "react";
 import type { Country } from "../../core/types";
 
+const currencyByCountry: Record<Exclude<Country, "JP">, string> = {
+  KR: "KRW",
+  CN: "CNY",
+  TH: "THB",
+  PH: "PHP",
+};
+
 export function useLiveRate() {
   const [rate, setRate] = useState<string>("");
   const [loading, setLoading] = useState(false);
@@ -15,7 +22,7 @@ export function useLiveRate() {
   async function fetchRate(country: Country) {
     if (country === "JP") return;
 
-    const base = country === "KR" ? "KRW" : "CNY";
+    const base = currencyByCountry[country];
     const cacheKey = `go_rate_${base}_${todayKey()}`;
 
     const cached = localStorage.getItem(cacheKey);

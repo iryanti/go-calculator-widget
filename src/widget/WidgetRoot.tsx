@@ -33,9 +33,7 @@ export function WidgetRoot() {
     setCountry(c);
 
     // tax defaults (user can set 0 if included)
-    if (c === "KR") setTax("5000");
-    if (c === "CN") setTax("6000");
-    if (c === "JP") setTax("6000");
+    setTax(c === "KR" ? "5000" : "6000");
 
     // JP doesn't need rate
     if (c === "JP") return;
@@ -56,8 +54,7 @@ export function WidgetRoot() {
       shippingOverseas: showExtra ? toNumber(shippingOverseas) : 0,
       takers: showExtra ? toNumber(takers) : 0,
       otherFee: showExtra ? toNumber(otherFee) : 0,
-      rounding: "none", // keep your calculate signature if still expects rounding
-    } as any);
+    });
   }, [
     country,
     drop,
@@ -89,6 +86,8 @@ export function WidgetRoot() {
           <option value="KR">🇰🇷 Korea</option>
           <option value="CN">🇨🇳 China</option>
           <option value="JP">🇯🇵 Japan</option>
+          <option value="TH">🇹🇭 Thailand</option>
+          <option value="PH">🇵🇭 Philippines</option>
         </select>
       </div>
 

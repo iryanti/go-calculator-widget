@@ -21,10 +21,10 @@ export function calculate(input: CalcInput): CalcOutput {
   let base = 0;
 
   if (input.country === "KR") {
-    if (!rate) warnings.push("Rate is required for KR/CN");
+    if (!rate) warnings.push("Rate is required");
     base = drop * 10000 * rate;
-  } else if (input.country === "CN") {
-    if (!rate) warnings.push("Rate is required for KR/CN");
+  } else if (input.country !== "JP") {
+    if (!rate) warnings.push("Rate is required");
     base = drop * rate;
   } else {
     // JP

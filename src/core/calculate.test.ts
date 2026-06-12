@@ -57,6 +57,42 @@ describe("calculate()", () => {
     expect(r.warnings).toHaveLength(0);
   });
 
+  it("TH: base = drop × THB rate", () => {
+    const input: CalcInput = {
+      country: "TH",
+      drop: 100,
+      rate: 470,
+      tax: 6000,
+      shippingOverseas: 0,
+      takers: 0,
+      otherFee: 0,
+    };
+
+    const r = calculate(input);
+
+    expect(r.base).toBeCloseTo(47000, 5);
+    expect(r.total).toBeCloseTo(53000, 5);
+    expect(r.warnings).toHaveLength(0);
+  });
+
+  it("PH: base = drop × PHP rate", () => {
+    const input: CalcInput = {
+      country: "PH",
+      drop: 100,
+      rate: 290,
+      tax: 6000,
+      shippingOverseas: 0,
+      takers: 0,
+      otherFee: 0,
+    };
+
+    const r = calculate(input);
+
+    expect(r.base).toBeCloseTo(29000, 5);
+    expect(r.total).toBeCloseTo(35000, 5);
+    expect(r.warnings).toHaveLength(0);
+  });
+
   it("Shipping split: shippingOverseas / takers", () => {
     const input: CalcInput = {
       country: "CN",
@@ -91,7 +127,7 @@ describe("calculate()", () => {
     const r = calculate(input);
 
     expect(r.base).toBe(0);
-    expect(r.warnings).toContain("Rate is required for KR/CN");
+    expect(r.warnings).toContain("Rate is required");
   });
 
   it("Negative values are treated as 0", () => {
@@ -114,6 +150,6 @@ describe("calculate()", () => {
     expect(r.total).toBe(0);
 
     // Because rate sanitized to 0 for CN -> warning exists
-    expect(r.warnings).toContain("Rate is required for KR/CN");
+    expect(r.warnings).toContain("Rate is required");
   });
 });

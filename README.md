@@ -1,6 +1,6 @@
 # GO Calculator Widget
 
-Embeddable Group Order (GO) price calculator for KR / CN / JP systems.
+Embeddable Group Order (GO) price calculator for KR / CN / JP / TH / PH systems.
 
 Built with TypeScript, React, and Vite (UMD library mode).
 
@@ -8,8 +8,8 @@ Built with TypeScript, React, and Vite (UMD library mode).
 
 ## ✨ Features
 
-- KR / CN / JP calculation system
-- Exchange rate auto-fetch (KRW / CNY)
+- KR / CN / JP / TH / PH calculation system
+- Exchange rate auto-fetch (KRW / CNY / THB / PHP)
 - Daily rate caching
 - Multi-instance support
 - CSS auto-injected
